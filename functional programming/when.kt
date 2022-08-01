@@ -1,16 +1,20 @@
+package com.example.hello
+
 fun main(){
-    //when is as similar as switch case
-    val day_no=4
-    val day=when(day_no){
-        1->"Monday"
-        2->"Tuesday"
-        3->"Wednesday"
-        4->"Thursday"
-        5->"Friday"
-        6->"Saturday"
-        7->"Sunday"
-        else->"invalid day no."
+    val month=8
+    when(month){
+        in 3..5->println("Summer")
+        in 6..8->println("Moonsoon")
+        in 9..11->println("Fall")
+        in 12 downTo 2->println("Winter")
     }
-   
-    println(day)
+    val X:Any="Arijit"
+    when(X){
+        is Int->println("$X is an Integer")
+        is Float->println("$X is an Float")
+        is Double->println("$X is an Double")
+        is String->println("$X is an String")
+        is Char->println("$X is an Character")
+    }
+
 }
